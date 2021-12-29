@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+
+int main(void) 
+{
+  int a,b,c;
+  printf("enter the angle of a triangle (in degrees);:\n");
+  printf("a= " );
+  scanf("%d",&a);
+  printf("b= ");
+  scanf("%d",&b);
+  printf("c= ");
+  scanf("%d",&c);
+
+  if(a+b+c !=180)
+  printf("invalid angle\n");
+  else if (a==b && b==c)
+  printf("equilaterial triangle\n");
+  else if(a==b || b==c || c==a)
+  printf ("isoseless triangle\n");
+  else 
+  printf("scalene triangle\n");
+  return 0;
+}
+/*case 1
+clang-7 -pthread -lm -o main main.c
+ ./main
+enter the angle of a triangle (in degrees);:
+a= 60
+b= 60
+c= 60
+equilaterial triangle
+
+
+case 2
+clang-7 -pthread -lm
+enter the angle of a triangle (in degrees);:
+a= 90
+b= 45
+c= 45
+isoseless triangle
+
+
+case 3
+ clang-7 -pthread -lm -o main main.c
+ ./main
+enter the angle of a triangle (in degrees);:
+a= 60
+b= 30
+c= 90
+scalene triangle*/
